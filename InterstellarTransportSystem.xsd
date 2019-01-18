@@ -1,0 +1,26 @@
+<!--
+ Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3-b02-. 
+-->
+<xs:schema xmlns:tns="http://soap.system.transport.interstellar.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.system.transport.interstellar.com/">
+<xs:element name="getShortestPath" type="tns:getShortestPath"/>
+<xs:element name="getShortestPathResponse" type="tns:getShortestPathResponse"/>
+<xs:element name="shortestPath" type="tns:shortestPath"/>
+<xs:complexType name="getShortestPath">
+	<xs:sequence>
+		<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+		<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getShortestPathResponse">
+	<xs:sequence>
+		<xs:element name="return" type="tns:shortestPath" minOccurs="0"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="shortestPath">
+	<xs:sequence>
+		<xs:element name="destinationPlanet" type="xs:string" minOccurs="0"/>
+		<xs:element name="shotestPath" type="xs:string" minOccurs="0"/>
+		<xs:element name="sourcePlanet" type="xs:string" minOccurs="0"/>
+	</xs:sequence>
+</xs:complexType>
+</xs:schema>
